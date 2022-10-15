@@ -1,0 +1,19 @@
+Google 
+create react app typescript
+
+npx create-react-app reacttypescript --template typescript
+
+
+
+Redux
+React router
+
+
+Official React Docs: 
+https://reactjs.org/docs/getting-started.html
+
+More React Resources:
+https://academind.com/learn/react/
+
+create-react-app + TypeScript Docs: 
+https://create-react-app.dev/docs/adding-typescript/

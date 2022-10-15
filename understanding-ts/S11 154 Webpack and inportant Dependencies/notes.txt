@@ -1,0 +1,69 @@
+tsc -w
+
+Use ES Moduls instead of Namespaces
+
+src/state/project-state.ts only run ONCE!
+
+JavaScript Modules (Overview): 
+https://medium.com/computed-comparisons/commonjs-vs-amd-vs-requirejs-vs-es6-modules-2e814b114a0b
+
+More on ES Modules: 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
+
+comment out in tsconfig.json 
+"rootDir": "./src"
+
+remove all .js where import is used
+
+create 
+webpack.config.js:
+const path = require('path');
+
+module.exports = {
+  entry: './src/app.ts',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
+  }
+};
+
+
+nmp install (node_modules created locally)
+
+npm audit fix
+
+npm run build
+
+npm start
+
+Create webpack.config.prod.js:
+plugins: [
+  new CleanPlugin.CleanWebpackPlugin()
+]
+npm install --save-dev clean-webpack-plugin
+npm audit fix
+
+npm run bild
+
+put on server only:
+index.html
+app.ccs
+dist/bundle.js
+
+Official Webpack Docs: 
+https://webpack.js.org/

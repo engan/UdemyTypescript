@@ -1,0 +1,16 @@
+tsc
+tsc -w
+
+
+External decorators / libraries:
+
+Angular
+https://angular.io/
+
+NestJS
+https://nestjs.com/
+
+
+
+Decorators:
+https://www.typescriptlang.org/docs/handbook/decorators.html

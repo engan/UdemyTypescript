@@ -1,0 +1,14 @@
+S D:\Dokumenter\Visual Studio Code\UdemyTypescript\helloWorld> 
+tsc --init
+
+tsc helloworld.ts
+node helloWorld.js
+printed: Hello world
+
+tsc helloworld.ts
+node helloWorld.js
+printed: Hello world
+printed: Hello John
+
+// For use of modules and combine thm in util.js:
+tsc util.ts timesTwo.ts --out util.js

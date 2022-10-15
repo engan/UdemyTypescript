@@ -1,0 +1,44 @@
+npm init
+
+package name: (s01-getting-started-009)
+version: (1.0.0)
+description:
+entry point: (app.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to D:\Dokumenter\Visual Studio Code\UdemyTypescript\understanding-ts\S01-Getting-Started-009\package.json:
+{
+  "name": "s01-getting-started-009",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+Is this OK? (yes)
+
+
+// npm install --save-dev lite-server
+// npm uninstall --save-dev lite-server
+// I use liveserver instead! (right-click file: "Open with live server")
+
+tsc app.ts
+PS D:\Dokumenter\Visual Studio Code\UdemyTypescript\understanding-ts\S02 011 Using Types> node app.js
+7.8
+
+right-click file index.html: "Open with live server", and start devTools (F12)
+7.8
+
+// make tsconfig.json (errors dissapairs)
+tsc --init
+
+Everyday Types:
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+
+

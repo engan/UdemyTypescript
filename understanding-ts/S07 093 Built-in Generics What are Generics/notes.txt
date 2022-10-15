@@ -1,0 +1,12 @@
+// try with global npm install, so not nmp install this time
+
+tsc
+tsc -w
+
+
+Utility types:
+https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+
+Generics: 
+https://www.typescriptlang.org/docs/handbook/generics.html

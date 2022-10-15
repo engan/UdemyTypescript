@@ -1,0 +1,11 @@
+copied files from project
+
+npm install
+
+tsc 
+
+tsc -w
+
+
+More on Advanced Types: 
+https://www.typescriptlang.org/docs/handbook/2/types-from-types.html

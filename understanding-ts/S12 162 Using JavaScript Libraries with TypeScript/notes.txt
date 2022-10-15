@@ -1,0 +1,18 @@
+npm i --save lodash
+
+tsconfig.json
+"noEmitOnError": false,
+
+Support to TypeScript
+npm install --save-dev @types/lodash
+
+npm start  
+http://localhost:8080/
+
+npm install class-transformer --save
+npm install reflect-metadata --save
+
+npm install class-validator --save
+
+tsconfig.json
+"experimentalDecorators": true,

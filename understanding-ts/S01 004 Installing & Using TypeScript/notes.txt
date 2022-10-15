@@ -1,0 +1,17 @@
+npm install -g typescript
+
+// globally
+npm install tsc-init -g
+tsc-init
+
+// to build for dev:
+npm run dev
+
+// To start unit tests:
+npm run test
+
+// To build for production:
+npm run build
+
+// locally
+tsc --initial

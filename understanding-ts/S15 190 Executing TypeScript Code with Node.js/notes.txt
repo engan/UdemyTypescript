@@ -1,0 +1,56 @@
+// Compile to app.js
+tsc app.ts
+
+// Run app.js
+node app.js
+
+// Delete app.js
+node app.ts         <   Still works same as: node app.js
+
+
+npm init
+
+// making tsconfig.json file
+tsc --init
+
+Check / set in tsconfig.json
+"target": "es2018",    
+"module": "commonjs",
+"rootDir": "./src",   
+"moduleResolution": "node", 
+"outDir": "./dist",         
+
+
+npm install --save express body-parser
+
+npm install --save-dev nodemon
+
+npm install --save-dev @types/node
+
+npm install @types/express
+
+Start new terminal in VS Code 
+npm start                       (starting http://localhost:3000/)
+
+
+In POSTMAN:
+POST 
+http://localhost:3000/todos/
+
+Body, Raw, JSON
+{
+    "text": "Finish the course!"
+}
+
+Output
+{
+    "message": "Created the todo.",
+    "createdTodo": {
+        "id": "0.6121400061163382",
+        "text": "Finish the course!"
+    }
+}
+
+TYPESCRIPT
+NEST.JS (Based on NodeJS)
+ANGULAR (Use of TypeScript)

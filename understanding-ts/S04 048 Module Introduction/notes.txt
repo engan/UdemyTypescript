@@ -1,0 +1,7 @@
+copied files from project
+
+npm install
+
+tsc 
+
+tsc -w

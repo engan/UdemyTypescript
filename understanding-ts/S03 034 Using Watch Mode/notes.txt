@@ -1,0 +1,38 @@
+npm init
+
+// Watch mode (one file)
+tsc app.ts --watch
+
+// Watch mode, alt command (one file))
+tsc app.ts -w
+
+// Watch mode (whole project)) - do only one time
+// Created a tsconfig.json file
+tsc --init
+
+// compile all projects .ts files
+tsc
+
+// Watch mode (whole project)) - rest of Time
+tsc -w
+
+Include and exclude files in tsconfig.json
+
+What is a tsconfig.json?
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+tsc CLI Options
+https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+tsconfig.json .map files gives also .ts files in browser (F12, source)
+"sourceMap": true, 
+
+
+These links might also be interesting:
+
+tsconfig Docs: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
+

@@ -1,0 +1,106 @@
+npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader
+
+npm audit fix ??
+
+comment out in tsconfig.json 
+"rootDir": "./src"
+
+check settings in tsconfig.json (outDir must match output path in webpack.config.js)
+"module": "commonjs",
+"outDir": "./dist"
+"sourceMap": true
+
+remove all .js in dist folder
+
+create 
+webpack.config.js:
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/app.ts',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist'
+  },
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        //test: /\.tsx?$/,
+        test: /\.ts$/,        
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
+  }
+};
+
+npm install --save-dev clean-webpack-plugin
+
+In package.json: 
+"build": "webpack --config webpack.config.prod.js"
+
+Use this in package.json without clean-webpack-plugin 
+"build": "webpack"
+
+
+
+npm run build
+
+npm start 
+    http://localhost:8080/
+
+// For use of Google API
+npm install --save axios
+// (See node_modules/axios/index.d.ts)
+
+npm audit fix
+
+npm install --save-dev @types/googlemaps
+
+
+OpenLayers, alternative to Google Maps: 
+https://openlayers.org/en/latest/doc/quickstart.html
+
+Include this in your HTML file:
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+
+
+In app.ts, use this code:
+declare var ol: any;
+ 
+function searchAddressHandler(event: Event) {
+  event.preventDefault();
+ 
+  const coordinates = {lat: 40.41, lng: -73.99}; // Can't fetch coordinates from Google API, use dummy ones
+ 
+  document.getElementById('map')!.innerHTML = ''; // clear <p> from <div id="map">
+  new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([coordinates.lng, coordinates.lat]),
+      zoom: 16
+    })
+  });
+}
+
+
+Google Maps Pricing: 
+https://cloud.google.com/maps-platform/pricing/sheet/
+
+Google Geocoding API: 
+https://developers.google.com/maps/documentation/geocoding/start
+
+Google Maps JS SDK: 
+https://developers.google.com/maps/documentation/javascript/tutorial
