@@ -1,5 +1,7 @@
 # UdemyTypescript
-Boost your JavaScript projects with TypeScript: Learn all about core types, generics, TypeScript + React or Node & more!  
+Boost your JavaScript projects with TypeScript:  
+Learn all about core types, generics, TypeScript + React or Node & more!  
+
 [Certificate of completion: Udemy course completed on 18 November 2021. 15 hours, 198 lectures](https://www.udemy.com/certificate/UC-bcaffef0-69c6-42cd-b604-7d5ff6d6354c/)  
 
 [Understanding TypeScript - 2022 Edition](https://www.udemy.com/course/understanding-typescript/)  
